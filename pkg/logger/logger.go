@@ -10,7 +10,7 @@ import (
 	"time"
 )
 
-// WithLevel：设置日志等级。
+// WithLevel：设置日志等级
 // WithFields：设置日志公共字段。
 // WithContext：设置日志上下文属性。
 // WithCaller：设置当前某一层调用栈的信息（程序计数器、文件信息、行号）。
