@@ -15,10 +15,11 @@ func NewRouter() *gin.Engine {
 	r.Use(gin.Recovery())
 	upload := api.NewUpload()
 	r.POST("/upload/file", upload.UploadFile)
+	r.POST("/auth", api.GetAuth)
 	r.StaticFS("/static", http.Dir(global.AppSetting.UploadSavePath))
 	article := v1.NewArticle()
 	tag := v1.NewTag()
-	r.POST("/auth", api.GetAuth)
+
 	apiv1 := r.Group("/api/v1")
 	apiv1.Use(middleware.JWT())
 	{
