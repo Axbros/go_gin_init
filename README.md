@@ -57,9 +57,8 @@ If you have any questions about this project, please feel free to post your ques
 
 ✈️ Telegram：[Nuitke](https://t.me/nuitke)
 
-<<<<<<< HEAD
+
 🐦 Twitter:[Copilotshub](https://twitter.com/copilotshub)
-=======
-🐦 Twitter:[Copilotshub](https://twitter.com/copilotshub)
->>>>>>> a4403fbb400bbcf5d505747ceec0c22ed670ce2b
+
+
 
