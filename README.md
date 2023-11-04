@@ -17,7 +17,7 @@
 - 🙅 Error code management：The error code is encapsulated uniformly, and the standard return of status code is realized
 - 📁 Pagination management：Encapsulate paging parameters to achieve unified paging return of all interfaces
 - ☁️ File Upload management： The interface of file upload and file access was encapsulated, and the secure file upload (using MD5 algorithm to rename the file) and access were realized
->>>>>>> a4403fbb400bbcf5d505747ceec0c22ed670ce2b
+
 
 ##### Application structure
 
