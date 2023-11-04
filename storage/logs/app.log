@@ -1,0 +1,7 @@
+2023/11/04 14:48:19 {"callers":["/Users/mac/Desktop/Project/gin_init/main.go: 26 main.init.0"],"level":"info","message":"eddycjy: go_gin_init/blog-service","time":1699080499020322000}
+2023/11/04 14:50:47 {"callers":["/Users/mac/Desktop/Project/gin_init/main.go: 26 main.init.0"],"level":"info","message":"eddycjy: go_gin_init/blog-service","time":1699080647661340000}
+2023/11/04 14:50:49 {"callers":["/Users/mac/Desktop/Project/gin_init/main.go: 26 main.init.0"],"level":"error","message":"app.BindAndValid errs: Key: 'State' Error:Field validation for 'State' failed on the 'oneof' tag","time":1699080649328152000}
+2023/11/04 15:07:15 {"callers":["/Users/mac/Desktop/Project/gin_init/main.go: 26 main.init.0"],"level":"info","message":"eddycjy: go_gin_init/blog-service","time":1699081635141983000}
+2023/11/04 15:13:24 {"callers":["/Users/mac/Desktop/Project/gin_init/main.go: 26 main.init.0"],"level":"info","message":"eddycjy: go_gin_init/blog-service","time":1699082004699360000}
+2023/11/04 15:16:56 {"callers":["/Users/mac/Desktop/Project/gin_init/main.go: 26 main.init.0"],"level":"info","message":"eddycjy: go_gin_init/blog-service","time":1699082216145225000}
+2023/11/04 15:23:37 {"callers":["/Users/mac/Desktop/Project/gin_init/main.go: 26 main.init.0"],"level":"info","message":"eddycjy: go_gin_init/blog-service","time":1699082617263408000}
