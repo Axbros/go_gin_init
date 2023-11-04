@@ -5,3 +5,4 @@
 2023/11/04 15:13:24 {"callers":["/Users/mac/Desktop/Project/gin_init/main.go: 26 main.init.0"],"level":"info","message":"eddycjy: go_gin_init/blog-service","time":1699082004699360000}
 2023/11/04 15:16:56 {"callers":["/Users/mac/Desktop/Project/gin_init/main.go: 26 main.init.0"],"level":"info","message":"eddycjy: go_gin_init/blog-service","time":1699082216145225000}
 2023/11/04 15:23:37 {"callers":["/Users/mac/Desktop/Project/gin_init/main.go: 26 main.init.0"],"level":"info","message":"eddycjy: go_gin_init/blog-service","time":1699082617263408000}
+2023/11/04 17:14:24 {"callers":["/Users/mac/Desktop/Project/gin_init/main.go: 26 main.init.0"],"level":"info","message":"eddycjy: go_gin_init/blog-service","time":1699089264395513000}

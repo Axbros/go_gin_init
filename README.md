@@ -7,10 +7,17 @@
 - ⚙️ Configuration file management：The configuration file is read through the Viper open source library of Go language
 - 🔐 Authority management：The JWT middleware is used to implement the restriction of user interface access rights
 - 📒 Log management：Six log levels were encapsulated, the system operation was logged, and the log was standardized and written to a file
+<<<<<<< HEAD
 -  😄 Type management：Encapsulate type conversion to facilitate conversion between different types
 -  🙅 Error code management：The error code is encapsulated uniformly, and the standard return of status code is realized
 -  📁 Pagination management：Encapsulate paging parameters to achieve unified paging return of all interfaces
 -  ☁️ File Upload management： The interface of file upload and file access was encapsulated, and the secure file upload (using MD5 algorithm to rename the file) and access were realized
+=======
+- 😄 Type management：Encapsulate type conversion to facilitate conversion between different types
+- 🙅 Error code management：The error code is encapsulated uniformly, and the standard return of status code is realized
+- 📁 Pagination management：Encapsulate paging parameters to achieve unified paging return of all interfaces
+- ☁️ File Upload management： The interface of file upload and file access was encapsulated, and the secure file upload (using MD5 algorithm to rename the file) and access were realized
+>>>>>>> a4403fbb400bbcf5d505747ceec0c22ed670ce2b
 
 ##### Application structure
 
@@ -50,4 +57,8 @@ If you have any questions about this project, please feel free to post your ques
 
 ✈️ Telegram：[Nuitke](https://t.me/nuitke)
 
+<<<<<<< HEAD
 🐦 Twitter:[Copilotshub](https://twitter.com/copilotshub)
+=======
+🐦 Twitter:[Copilotshub](https://twitter.com/copilotshub)
+>>>>>>> a4403fbb400bbcf5d505747ceec0c22ed670ce2b
