@@ -16,6 +16,10 @@ App:
     - .jpg
     - .jpeg
     - .png
+JWT:
+  Secret: Axbros
+  Issuer: Nuite
+  Expire: 7200
 Database:
   DBType: mysql
   Username: root  # 填写你的数据库账号
@@ -27,7 +31,3 @@ Database:
   ParseTime: True
   MaxIdleConns: 10
   MaxOpenConns: 30
-JWT:
-  Secret: Axbros
-  Issuer: Nuite
-  Expire: 7200
