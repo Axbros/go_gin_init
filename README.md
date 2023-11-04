@@ -4,20 +4,13 @@
 
 ##### Current Features
 
-- ⚙️ Configuration file management：The configuration file is read through the Viper open source library of Go language
-- 🔐 Authority management：The JWT middleware is used to implement the restriction of user interface access rights
-- 📒 Log management：Six log levels were encapsulated, the system operation was logged, and the log was standardized and written to a file
-<<<<<<< HEAD
--  😄 Type management：Encapsulate type conversion to facilitate conversion between different types
--  🙅 Error code management：The error code is encapsulated uniformly, and the standard return of status code is realized
--  📁 Pagination management：Encapsulate paging parameters to achieve unified paging return of all interfaces
--  ☁️ File Upload management： The interface of file upload and file access was encapsulated, and the secure file upload (using MD5 algorithm to rename the file) and access were realized
-=======
-- 😄 Type management：Encapsulate type conversion to facilitate conversion between different types
-- 🙅 Error code management：The error code is encapsulated uniformly, and the standard return of status code is realized
-- 📁 Pagination management：Encapsulate paging parameters to achieve unified paging return of all interfaces
-- ☁️ File Upload management： The interface of file upload and file access was encapsulated, and the secure file upload (using MD5 algorithm to rename the file) and access were realized
-
+- ⚙️ **Configuration file management**：The configuration file is read through the Viper open source library of Go language
+- 🔐 **Authority management**：The JWT middleware is used to implement the restriction of user interface access rights
+- 📒 **Log management**：Six log levels were encapsulated, the system operation was logged, and the log was standardized and written to a file
+- 😄 **Type management**：Encapsulate type conversion to facilitate conversion between different types
+- 🙅 **Error code management**：The error code is encapsulated uniformly, and the standard return of status code is realized
+- 📁 **Pagination management**：Encapsulate paging parameters to achieve unified paging return of all interfaces
+- ☁️ **File Upload management**： The interface of file upload and file access was encapsulated, and the secure file upload (using MD5 algorithm to rename the file) and access were realized
 
 ##### Application structure
 
@@ -44,10 +37,10 @@ go-gin-init
 
 ##### 🚗 Future Features
 
-- 📧 Email alarm Handling：A simple E-mail alarm function needs to be implemented to ensure that after the Panic occurs, the corresponding person in charge can be notified by E-mail alarm in time after the arrest.
-- ⏰ Interface current limiting control：As your application runs, new clients are coming in all the time, and sometimes there is a sudden spike in traffic (e.g., a marketing campaign).If you don't cull the peak in time and your resources aren't keeping up, it can lead to accidents
-- 🐱 Unified timeout control：It prevents upstream and downstream applications from interfering with each other, leading to cascaded reactions that ultimately make the entire cluster application unavailable at a certain scale
-- ⛓️ Link tracking：Distributed link tracing is used to solve part of the problem of observability
+- 📧 **Email alarm Handling**：A simple E-mail alarm function needs to be implemented to ensure that after the Panic occurs, the corresponding person in charge can be notified by E-mail alarm in time after the arrest.
+- ⏰ **Interface current limiting control**：As your application runs, new clients are coming in all the time, and sometimes there is a sudden spike in traffic (e.g., a marketing campaign).If you don't cull the peak in time and your resources aren't keeping up, it can lead to accidents
+- 🐱 **Unified timeout control**：It prevents upstream and downstream applications from interfering with each other, leading to cascaded reactions that ultimately make the entire cluster application unavailable at a certain scale
+- ⛓️ **Link tracking**：Distributed link tracing is used to solve part of the problem of observability
 
 ## Communication and technical support
 
@@ -58,7 +51,7 @@ If you have any questions about this project, please feel free to post your ques
 ✈️ Telegram：[Nuitke](https://t.me/nuitke)
 
 
-🐦 Twitter：[Copilotshub](https://twitter.com/copilotshub)
+🐦 Twitter:[Copilotshub](https://twitter.com/copilotshub)
 
 
 
