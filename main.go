@@ -8,6 +8,7 @@ import (
 	"gin_init/pkg/setting"
 	"github.com/gin-gonic/gin"
 	_ "github.com/go-sql-driver/mysql"
+	"github.com/gomodule/redigo/redis"
 	"gopkg.in/natefinch/lumberjack.v2"
 	"log"
 	"net/http"
@@ -26,6 +27,10 @@ func init() {
 	err = setupLogger()
 	if err != nil {
 		log.Fatalf("init.setupLogger err: %v", err)
+	}
+	err = setupRedis()
+	if err != nil {
+		log.Fatalf("init.setupRedis err: %v", err)
 	}
 }
 func main() {
@@ -62,6 +67,11 @@ func setupSetting() error {
 	if err != nil {
 		return err
 	}
+	err = setting.ReadSection("Redis", &global.RedisSetting)
+	if err != nil {
+		return err
+	}
+	global.RedisSetting.IdleTimeout *= time.Second
 	global.JWTSetting.Expire *= time.Second
 	global.ServerSetting.ReadTimeout *= time.Second
 	global.ServerSetting.WriteTimeout *= time.Second
@@ -84,5 +94,31 @@ func setupLogger() error {
 		MaxAge:    10,
 		LocalTime: true,
 	}, "", log.LstdFlags).WithCaller(2)
+	return nil
+}
+func setupRedis() error {
+	global.RedisConn = &redis.Pool{
+		MaxIdle:     global.RedisSetting.MaxIdle,
+		MaxActive:   global.RedisSetting.MaxActive,
+		IdleTimeout: global.RedisSetting.IdleTimeout,
+		Dial: func() (redis.Conn, error) {
+			c, err := redis.Dial("tcp", global.RedisSetting.Host)
+			if err != nil {
+				return nil, err
+			}
+			if global.RedisSetting.Password != "" {
+				if _, err := c.Do("AUTH", global.RedisSetting.Password); err != nil {
+					c.Close()
+					return nil, err
+				}
+			}
+			return c, err
+		},
+		TestOnBorrow: func(c redis.Conn, t time.Time) error {
+			_, err := c.Do("PING")
+			return err
+		},
+	}
+
 	return nil
 }
