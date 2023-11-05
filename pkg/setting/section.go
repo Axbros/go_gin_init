@@ -38,6 +38,13 @@ type JWTSettingS struct {
 	Issuer string
 	Expire time.Duration
 }
+type RedisSettingS struct {
+	Host        string
+	Password    string
+	MaxIdle     int
+	MaxActive   int
+	IdleTimeout time.Duration
+}
 
 func (s *Setting) ReadSection(k string, v interface{}) error {
 	err := s.vp.UnmarshalKey(k, v)
