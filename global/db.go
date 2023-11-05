@@ -1,7 +1,11 @@
 package global
 
-import "github.com/jinzhu/gorm"
+import (
+	"github.com/gomodule/redigo/redis"
+	"github.com/jinzhu/gorm"
+)
 
 var (
-	DBEngine *gorm.DB
+	DBEngine  *gorm.DB
+	RedisConn *redis.Pool
 )
