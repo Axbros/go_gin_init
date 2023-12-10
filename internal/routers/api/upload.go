@@ -19,6 +19,7 @@ func NewUpload() Upload {
 func (u Upload) UploadFile(c *gin.Context) {
 	response := app.NewResponse(c)
 	file, fileHeader, err := c.Request.FormFile("file")
+
 	if err != nil {
 		response.ToErrorResponse(ErrorCode.InvalidParams.WithDetails(err.Error()))
 		return
@@ -38,7 +39,7 @@ func (u Upload) UploadFile(c *gin.Context) {
 		return
 	}
 
-	response.ToResponse(gin.H{
+	response.ToResponse(200, "success", gin.H{
 		"file_access_url": fileInfo.AccessUrl,
 	})
 }

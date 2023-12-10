@@ -5,6 +5,7 @@ import (
 	"gin_init/internal/middleware"
 	"gin_init/internal/routers/api"
 	v1 "gin_init/internal/routers/api/v1"
+	v2 "gin_init/internal/routers/api/v2"
 	"github.com/gin-gonic/gin"
 	"net/http"
 )
@@ -17,24 +18,22 @@ func NewRouter() *gin.Engine {
 	r.POST("/upload/file", upload.UploadFile)
 	r.POST("/auth", api.GetAuth)
 	r.StaticFS("/static", http.Dir(global.AppSetting.UploadSavePath))
-	article := v1.NewArticle()
+
 	tag := v1.NewTag()
+	userHandler := v2.NewUser()
 
-	apiv1 := r.Group("/api/v1")
-	apiv1.Use(middleware.JWT())
+	apiV1 := r.Group("/api/v1")
+	apiV1.Use(middleware.JWT())
 	{
-		apiv1.POST("/tags", tag.Create)
-		apiv1.DELETE("/tags/:id", tag.Delete)
-		apiv1.PUT("/tags/:id", tag.Update)
-		apiv1.PATCH("/tags/:id/state", tag.Update)
-		apiv1.GET("/tags", tag.List)
-
-		apiv1.POST("/articles", article.Create)
-		apiv1.DELETE("/articles/:id", article.Delete)
-		apiv1.PUT("/articles/:id", article.Update)
-		apiv1.PATCH("/articles/:id/state", article.Update)
-		apiv1.GET("/articles/:id", article.Get)
-		apiv1.GET("/articles", article.List)
+		apiV1.POST("/tags", tag.Create)
+		apiV1.DELETE("/tags/:id", tag.Delete)
+		apiV1.PUT("/tags/:id", tag.Update)
+		apiV1.PATCH("/tags/:id/state", tag.Update)
+		apiV1.GET("/tags", tag.List)
+	}
+	apiV2 := r.Group("/api/v2") //v2 doesn't need authority
+	{
+		apiV2.POST("/login", userHandler.Login)
 	}
 
 	return r

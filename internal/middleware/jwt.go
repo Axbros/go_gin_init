@@ -22,6 +22,7 @@ func JWT() gin.HandlerFunc {
 			ecode = ErrorCode.InvalidParams
 		} else {
 			_, err := app.ParseToken(token)
+
 			if err != nil {
 				switch err.(*jwt.ValidationError).Errors {
 				case jwt.ValidationErrorExpired:

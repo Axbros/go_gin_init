@@ -33,7 +33,7 @@ func GetAuth(c *gin.Context) {
 		return
 	}
 
-	response.ToResponse(gin.H{
+	response.ToResponse(200, "success", gin.H{
 		"token": token,
 	})
 }
